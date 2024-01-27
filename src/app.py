@@ -13,6 +13,6 @@ if __name__ == "__main__":
     
     print(f"Submit Request Body: {submitRequestBody}")
 
-    submitResponseBody = api.submit(submitRequestBody)
+    submitResponseBody = api.submitPrompt(submitRequestBody)
     
     print(f"Submit Response Body: {submitResponseBody}")
