@@ -5,4 +5,6 @@ from submit_response_body import SubmitResponseBody
 class ApiInterface(ABC):
     @abstractmethod
     def submit(self, data: SubmitRequestBody) -> SubmitResponseBody:
+        
+        SubmitRequestBody()
         pass
