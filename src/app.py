@@ -7,9 +7,12 @@ if __name__ == "__main__":
     api = ApiImplementation()
     
     submitRequestBody = SubmitRequestBody(
-        content="Here is my recommendation",
-        input_data={"beers": [{"name": "A Good Beer"}]},
-        rec=["beer_id_1", "beer_id_2", "beer_id_3"]
+        content="Recommend me a good beer",
+        sessionId=9238457
     )
+    
+    print(f"Submit Request Body: {submitRequestBody}")
 
-    api.submit('{"content", "my rec"}')
+    submitResponseBody = api.submit(submitRequestBody)
+    
+    print(f"Submit Response Body: {submitResponseBody}")
