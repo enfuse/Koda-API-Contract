@@ -1,4 +1,4 @@
-# First time setup
+# Manage dependencies and virtual environment
 
 ## Create the virtual environment from the environment.yml file
 ```shell
@@ -14,10 +14,6 @@ conda activate ./venv
 ```shell
 conda list
 ```
-
-# Local development
-
-[Activate the virtual environment](#activate-the-virtual-environement))
 
 ## Install a new dependency
 ```shell
@@ -37,3 +33,11 @@ Convert prefix to relative path: `~/path/to/repo/venv` -> `./venv`
 ```shell
 sed -i 's|prefix: .*|prefix: ./venv|' environment.yml
 ```
+
+# Run the app
+
+```shell
+python src/app.py
+```
+
+
