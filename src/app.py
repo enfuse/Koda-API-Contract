@@ -1,18 +1,18 @@
 from api_implementation import ApiImplementation
-from submit_request_body import SubmitRequestBody
+from submit_prompt_request_body import SubmitPromptRequestBody
 
 print('running app')
 
 if __name__ == "__main__":
     api = ApiImplementation()
     
-    submitRequestBody = SubmitRequestBody(
+    submitPromptRequestBody = SubmitPromptRequestBody(
         content="Recommend me a good beer",
         sessionId=9238457
     )
     
-    print(f"Submit Request Body: {submitRequestBody}")
+    print(f"Submit Request Body: {submitPromptRequestBody}")
 
-    submitResponseBody = api.submitPrompt(submitRequestBody)
+    submitPromptResponseBody = api.submitPrompt(submitPromptRequestBody)
     
-    print(f"Submit Response Body: {submitResponseBody}")
+    print(f"Submit Response Body: {submitPromptResponseBody}")

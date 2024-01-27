@@ -1,9 +1,5 @@
 from typing import TypedDict, List
 
-"""
-Defines the response body for the /submit endpoint
-"""
-
 class Beer(TypedDict):
     """
     Name of a beer that may or may not match any IDs or beers mentioned in 'content'.
@@ -17,7 +13,8 @@ class Beer(TypedDict):
 class InputData(TypedDict):
     beers: List[Beer]
 
-class SubmitResponseBody(TypedDict):
+"""Defines the response body for the /submit endpoint"""
+class SubmitPromptResponseBody(TypedDict):
     """
     Text for Koda to speak out loud
     

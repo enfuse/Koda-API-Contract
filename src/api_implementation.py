@@ -1,11 +1,11 @@
 
 from api_interface import ApiInterface
-from submit_request_body import SubmitRequestBody
-from submit_response_body import SubmitResponseBody, InputData, Beer
+from submit_prompt_request_body import SubmitPromptRequestBody
+from submit_prompt_response_body import SubmitPromptResponseBody, InputData, Beer
 
 class ApiImplementation(ApiInterface):
-    def submit(self, data: SubmitRequestBody) -> SubmitResponseBody:
-        return SubmitResponseBody(            
+    def submitPrompt(self, submitPromptRequestBody: SubmitPromptRequestBody) -> SubmitPromptResponseBody:
+        return SubmitPromptResponseBody(            
             content="Here is my recommendation",
             input_data=InputData(
                 beers=[

@@ -1,10 +1,7 @@
 from typing import TypedDict
 
-"""
-Defines the request body for the /submit endpoint
-"""
-
-class SubmitRequestBody(TypedDict):
+"""Defines the request body for the /submit endpoint"""
+class SubmitPromptRequestBody(TypedDict):
     """
     User Input
     
