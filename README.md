@@ -1,4 +1,15 @@
 Table of contents
+- [Manage dependencies and virtual environment](#manage-dependencies-and-virtual-environment)
+  * [Create the virtual environment from the environment.yml file](#create-the-virtual-environment-from-the-environmentyml-file)
+  * [Activate the virtual environment](#activate-the-virtual-environment)
+  * [Verify the virtual environment dependencies](#verify-the-virtual-environment-dependencies)
+  * [Install a new dependency](#install-a-new-dependency)
+  * [Remove a dependency](#remove-a-dependency)
+  * [Update environment.yml file](#update-environmentyml-file)
+- [Run the app](#run-the-app)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Manage dependencies and virtual environment
 
