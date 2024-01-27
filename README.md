@@ -1,11 +1,39 @@
-# Conda
+# First time setup
 
-## Create virtual environment
+## Create the virtual environment from the environment.yml file
 ```shell
-conda create --prefix ./venv python=3.8
+conda env create -f environment.yml
 ```
 
-## Activate virtual environment
+## Activate the virtual environment
 ```shell
 conda activate ./venv
+```
+
+## Verify the virtual environment dependencies
+```shell
+conda list
+```
+
+# Local development
+
+[Activate the virtual environment](#activate-the-virtual-environement))
+
+## Install a new dependency
+```shell
+conda install <dependency>
+```
+
+## Remove a dependency
+```shell
+conda remove <dependency>
+```
+
+## Update environment.yml file
+```shell
+conda env export --verbose --no-builds --name venv --from-history > environment.yml
+```
+Convert prefix to relative path: `~/path/to/repo/venv` -> `./venv`
+```shell
+sed -i 's|prefix: .*|prefix: ./venv|' environment.yml
 ```
