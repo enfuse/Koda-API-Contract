@@ -17,6 +17,6 @@ class ApiInterface(ABC):
     This method will deactivate the session-id that the client sends as a path parameter, 
     and respond with a newly generated and activated session-id
     """
-    # @abstractmethod
-    # def resetSession(self, ):
-    #     pass
+    @abstractmethod
+    def resetSession(self, sessionId: str) -> str:
+        pass
