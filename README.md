@@ -35,13 +35,13 @@ conda remove <dependency>
 ```
 ## Update environment.yml file
 ```shell
-conda env export --verbose --no-builds --name venv --from-history > environment.yml
+conda env export --verbose --no-builds --from-history --prefix ./venv > environment.yml
 ```
 Important:
-The export command will set the prefix as an absolute path from your personal home directory, so you'll need to convert the prefix to a relative path pointing to the project's root directory (`~/path/to/repo/venv` -> `./venv`).
+The export command will set `prefix` and `name` as an absolute path from your personal home directory to the `./venv` in the root of the project, so you'll need to convert the prefix to a relative path pointing to the project's root directory (`~/path/to/repo/venv` -> `./venv`).
 You can do this on linux with the following `sed` command:
 ```shell
-sed -i 's|prefix: .*|prefix: ./venv|' environment.yml
+sed -i 's|prefix: .*|prefix: ./venv|; s|name: .*|name: new_environment_name|' environment.yml
 ```
 
 # Run the app
