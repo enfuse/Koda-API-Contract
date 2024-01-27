@@ -1,4 +1,4 @@
-from src.contract.api_implementation import ApiImplementation
+from api_implementation import ApiImplementation
 
 print('running app')
 
