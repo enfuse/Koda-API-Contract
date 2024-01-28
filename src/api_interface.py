@@ -12,7 +12,7 @@ class ApiInterface(ABC):
     def submitPrompt(self, submitPromptRequestBody: SubmitPromptRequestBody) -> SubmitPromptResponseBody:
         pass
     
-    """Handler method for the GET /reset/{sessionId} endpoint
+    """Handler method for the GET /reset/{session_id} endpoint
     
     This method will deactivate the session-id that the client sends as a path parameter, 
     and respond with a newly generated and activated session-id
@@ -20,3 +20,14 @@ class ApiInterface(ABC):
     @abstractmethod
     def resetSession(self, sessionId: str) -> str:
         pass
+    
+    """Handler method for the [TODO: HTTP verb (probably GET)] /loadconvo/{convo_id} endpoint
+    
+    This method will lookup a conversation in the database and load it into the LLM
+    """
+    @abstractmethod
+    def loadConversation(self, conversationId: str) -> bool: 
+        pass
+    
+    
+    # TODO: /edit endpoint

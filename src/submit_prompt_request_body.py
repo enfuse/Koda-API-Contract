@@ -16,7 +16,7 @@ class SubmitPromptRequestBody(TypedDict):
     Example:
     1616221
     """
-    sessionId: int
+    sessionId: str
     
     """
     Doesn't actually get passed in - defaults to "user"

@@ -21,3 +21,6 @@ class ApiImplementation(ApiInterface):
         
     def resetSession(self, sessionId: str) -> str:
         return uuid.uuid4().hex;
+    
+    def loadConversation(self, conversationId: str) -> bool: 
+        return True
