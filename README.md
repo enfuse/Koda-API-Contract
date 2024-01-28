@@ -61,4 +61,9 @@ conda list
 python src/app.py
 ```
 
+# Run the flask api
+```shell
+uvicorn main:app --reload
+```
+
 
